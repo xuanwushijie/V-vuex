@@ -3,7 +3,7 @@
  */
 import Vue from 'vue'
 import Vuex from 'vuex'
-//声明使用
+
 Vue.use(Vuex)
 
 /*
@@ -11,7 +11,7 @@ state对象
   类似于data
  */
 const state = {
-  count: 1   // 初始化状态数据
+  count: 0   // 初始化状态数据
 }
 
 /*
@@ -64,7 +64,7 @@ getters对象
   包含多个get计算计算属性方法
  */
 const getters = {
-  evenOrOdd (state) {
+  oddOrEven (state) {
     return state.count%2===0 ? '偶数' : '奇数'
   },
   count (state) {
